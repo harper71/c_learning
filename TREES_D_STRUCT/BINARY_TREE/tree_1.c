@@ -22,7 +22,27 @@ typedef struct binary_tree binary_tree_t;
 
 typedef struct binary_tree_s bst_t;
 
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
+{
+	binary_tree_t *new_node= malloc(sizeof(binary_tree_t));
+	if (new_node == NULL)
+	{
+		return (NULL);
+	}
+
+	if (value == -1)
+	{
+		return (0);
+	}
+	new_node->n = value;
+	new_node->parent = parent;
+	new_node->left = NULL;
+	new_node->right = NULL;
+
+	return new_node;
+}
 int main(void)
 {
-	int var;
+	binary_tree_t *root;
+
 }
